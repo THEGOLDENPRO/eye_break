@@ -12,4 +12,4 @@
 
 <br>
 
-> I stay way too long on the computer without taking eye breaks so I was like hey here's my second excuse to code something in Rust and that's how ended up here. 😐 This script follows the **[20:20:20 rule](https://www.google.com/search?q=20%3A20%3A20+rule)**.
+> I stay way too long on the computer without taking eye breaks so I was like hey here's my second excuse to code something in Rust and that's how we ended up here. 😐 This script follows the **[20:20:20 rule](https://www.google.com/search?q=20%3A20%3A20+rule)**.
