@@ -1,9 +1,10 @@
 [package]
 name = "eye_break"
-version = "0.1.0"
+version = "0.1.5"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-winrt-notification = "0.5.1"
+byteorder = "1"
+notify-rust = "4"
