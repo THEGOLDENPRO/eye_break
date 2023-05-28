@@ -1,6 +1,5 @@
-use std:: {thread, time, path::Path, env};
-use winrt_notification:: {Duration, Sound, Toast};
-
+use std:: {thread, time, env};
+use notify_rust::Notification;
 
 fn main() {
 
@@ -13,33 +12,34 @@ fn main() {
             time_now.as_secs()
         );
 
-        let assets_path_string = String::from(env::current_dir().unwrap_or_default().to_string_lossy() + "\\src\\assets");
+        let assets_path_string = String::from(env::current_dir().unwrap_or_default().to_string_lossy() + "/src/assets");
 
-        let zero_two_image_path = assets_path_string.to_owned() + "\\zero_two_eyes.gif";
-        let thumbs_up_image_path = assets_path_string.to_owned() + "\\anime_thumbs_up.gif";
+        let icon_path = assets_path_string.to_owned() + "/icon.ico";
+        let zero_two_image_path = assets_path_string.to_owned() + "/zero_two_eyes.gif";
+        let thumbs_up_image_path = assets_path_string.to_owned() + "/anime_thumbs_up.gif";
 
-        Toast::new(Toast::POWERSHELL_APP_ID)
-            .title("Time to take an eye break!")
-            .text1("Look at least 20 feet away for 20 seconds.")
-            .sound(Some(Sound::SMS))
-            .hero(Path::new(&zero_two_image_path), "Zero Two blinking eyes")
-            .duration(Duration::Long)
-            .show()
-            .expect("unable to toast for some weird reason");
+        let mut take_break_noti = Notification::new();
+        take_break_noti.summary("Time to take an eye break!");
+        take_break_noti.body("Look at least 20 feet away for 20 seconds.");
+        take_break_noti.icon(&icon_path);
 
-        thread::sleep(time::Duration::from_millis(25 * 1000));
+        let mut continue_noti = Notification::new();
+        continue_noti.summary("You can continue now :)");
+        continue_noti.body("20 seconds up you may continue.");
+        continue_noti.icon(&icon_path);
 
-        Toast::new(Toast::POWERSHELL_APP_ID)
-            .title("You can continue now :)")
-            .text1("20 seconds up you may continue.")
-            .sound(Some(Sound::Reminder))
-            .hero(Path::new(&thumbs_up_image_path), "Zero Two blinking eyes")
-            .duration(Duration::Short)
-            .show()
-            .expect("unable to toast for some weird reason");
+        if cfg!(windows) {
+            take_break_noti.image_path(&zero_two_image_path);
+            continue_noti.image_path(&thumbs_up_image_path);
+        }
 
+        take_break_noti.show().expect("unable to toast for some weird reason");
 
-        thread::sleep(time::Duration::from_millis((20 * 60) * 1000));
+        thread::sleep(time::Duration::from_millis(25 * 1000)); // Sleep for 25 seconds.
+
+        continue_noti.show().expect("unable to toast for some weird reason");
+
+        thread::sleep(time::Duration::from_millis((20 * 60) * 1000)); // Sleep for 20 minutes.
     }
 
 }
