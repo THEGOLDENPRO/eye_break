@@ -9,6 +9,7 @@
 
 </div>
 
+### NEW: Now supports Linux (only tested on fedora kde though)
 
 <br>
 
