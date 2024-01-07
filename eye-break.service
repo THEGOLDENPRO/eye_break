@@ -1,0 +1,9 @@
+[Unit]
+Description=Goldy's eye break reminder program.
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/eye-break
+
+[Install]
+WantedBy=default.target
