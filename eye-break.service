@@ -3,7 +3,9 @@ Description=Goldy's eye break reminder program.
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/eye-break
+Type=simple
+StandardOutput=journal
+ExecStart=%h/.local/bin/eye-break
 
 [Install]
 WantedBy=default.target
