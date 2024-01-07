@@ -24,7 +24,7 @@ Now if you have 'make' you may just run these commands:
 make # build
 make install # install to bin, install assets and add service to systemd
 ```
-> If you don't have 'make' for some reason go and copy the code from the [makefile](https://github.com/THEGOLDENPRO/aghpb-cli/blob/master/Makefile) yourself but try the make command at least you might already have it and I highly recommend you install it.
+> If you don't have 'make' for some reason go and copy the code from the [makefile](https://github.com/THEGOLDENPRO/eye-break/blob/master/Makefile) yourself but try the make command at least you might already have it and I highly recommend you install it.
 
 Enable the systemd service.
 ```sh
