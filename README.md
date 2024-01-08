@@ -28,11 +28,11 @@ make install # install to bin, install assets and add service to systemd
 
 Enable the systemd service.
 ```sh
-systemd --user enable eye-break
+systemctl --user enable eye-break
 ```
 Start it!
 ```sh
-systemd --user start eye-break
+systemctl --user start eye-break
 ```
 **then done 🥳**
 
