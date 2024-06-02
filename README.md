@@ -2,12 +2,17 @@
 
   # 👀 eye break
   
-  <sub>Little program I made in 🦀Rust that reminds me every 20 minutes to look away from my computer 🖥screen.<sub>
+  <sub>Little program I made in 🦀 Rust that reminds me every 20 minutes to look away from my computer 🖥screen.<sub>
   
   <img width="320px" src="https://user-images.githubusercontent.com/66202304/230767901-a282d2fc-3dc4-43ee-a4c3-7573e55a344e.png">
   <img width="320px" src="https://user-images.githubusercontent.com/66202304/230767905-75bebf9e-a015-4388-9d44-d0344336f57f.png">
 
 </div>
+
+## What is this? ❓
+I stay way too long staring at the computer without taking eye breaks so I made a deamon (service) that runs in the background to remind to do so. It follows the **[20:20:20 rule](https://www.google.com/search?q=20%3A20%3A20+rule)**. Making this was also an excuce to code a 2nd program in 🦀 Rust.
+
+There's also an implementation of eye break in **Go** that my friend made, check it out: https://github.com/r3tr0ananas/eye-break-go
 
 ## Installation 🛠️
 Install from source (like a real man).
@@ -40,5 +45,3 @@ systemctl --user start eye-break
 *It's very complicated...* but I'll probably get at it one day.
 
 <br>
-
-> I stay way too long on the computer without taking eye breaks so I was like hey here's my second excuse to code something in Rust and that's how we ended up here. 😐 This script follows the **[20:20:20 rule](https://www.google.com/search?q=20%3A20%3A20+rule)**.
