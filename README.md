@@ -12,7 +12,7 @@
 ## What is this? ❓
 I stay way too long staring at the computer without taking eye breaks so I made a deamon (service) that runs in the background to remind to do so. It follows the **[20:20:20 rule](https://www.google.com/search?q=20%3A20%3A20+rule)**. Making this was also an excuce to code a 2nd program in 🦀 Rust.
 
-There's also an implementation of eye break in **Go** that my friend made, check it out: https://github.com/r3tr0ananas/eye-break-go
+🌟 There's also an implementation of eye break in **Go** that my friend made, check it out: https://github.com/r3tr0ananas/eye-break-go
 
 ## Installation 🛠️
 Install from source (like a real man).
